@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthFlow - Symptom Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">HealthFlow</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#checker">Symptom Checker</a></li>
+                <li><a href="#activity">Health Quiz</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="animate-fade-in">Navigate Your Health with Confidence</h1>
+                    <p class="animate-fade-in delay-1">HealthFlow is your trusted first step to understanding common symptoms. Simple, secure, and informative.</p>
+                    <a href="#checker" class="button primary-button animate-slide-up delay-2">Start Symptom Check <i class="fas fa-stethoscope"></i></a>
+                </div>
+                <div class="hero-graphic animate-fade-in delay-3">
+                    <p style="font-size: 1.5em; font-weight: 500; color: #b0c4de; text-align: right;">
+                        <i class="fas fa-heartbeat"></i> Knowledge is the first step to Wellness.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="checker" class="content-section bg-light-grey">
+            <div class="container main-content">
+                <div class="card shadow-md">
+                    <h2 class="section-title"><i class="fas fa-search-plus icon-title"></i> Simple Symptom Checker</h2>
+                    <p class="description-text">Select any symptoms you are currently experiencing to get an initial informational overview.</p>
+
+                    <div class="symptom-list">
+                        <label><input type="checkbox" data-symptom="fever" id="fever"> <i class="fas fa-thermometer-half icon-bullet"></i> Fever</label>
+                        <label><input type="checkbox" data-symptom="cough" id="cough"> <i class="fas fa-lungs icon-bullet"></i> Cough</label>
+                        <label><input type="checkbox" data-symptom="sore-throat" id="sore-throat"> <i class="fas fa-throat icon-bullet"></i> Sore Throat</label>
+                        <label><input type="checkbox" data-symptom="runny-nose" id="runny-nose"> <i class="fas fa-head-side-mask icon-bullet"></i> Runny Nose</label>
+                        <label><input type="checkbox" data-symptom="headache" id="headache"> <i class="fas fa-head-side-virus icon-bullet"></i> Headache</label>
+                        <label><input type="checkbox" data-symptom="fatigue" id="fatigue"> <i class="fas fa-bed icon-bullet"></i> Fatigue</label>
+                        <label><input type="checkbox" data-symptom="nausea" id="nausea"> <i class="fas fa-hand-holding-water icon-bullet"></i> Nausea</label>
+                        <label><input type="checkbox" data-symptom="stomach-pain" id="stomach-pain"> <i class="fas fa-stomach icon-bullet"></i> Stomach Pain</label>
+                        <label><input type="checkbox" data-symptom="sneezing" id="sneezing"> <i class="fas fa-wind icon-bullet"></i> Sneezing</label>
+                        <label><input type="checkbox" data-symptom="body-aches" id="body-aches"> <i class="fas fa-bone icon-bullet"></i> Body Aches</label>
+                    </div>
+
+                    <button id="check-symptoms" class="primary-button">Check Symptoms</button>
+
+                    <div id="results" class="results-box"></div>
+
+                    <p class="disclaimer">Disclaimer: This website is for informational purposes only. Always seek the advice of a qualified healthcare provider.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="activity" class="content-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-gamepad icon-title"></i> The 'Feel Better' Quick Quiz</h2>
+                <p class="description-text">Answer a few simple questions to get a light-hearted, initial assessment of whether you might be coming down with something. (Click 'Reset' to start over.)</p>
+
+                <div class="card shadow-md interactive-card">
+                    <p id="quiz-question" class="quiz-question-text">Question 1: Are you constantly reaching for a tissue?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-button" data-answer="yes">Yes</button>
+                        <button class="quiz-button" data-answer="no">No</button>
+                    </div>
+                    <div id="quiz-result" class="results-box hidden"></div>
+                    <button id="quiz-reset" class="secondary-button hidden">Reset Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content-section bg-light-grey">
+            <div class="container about-us-grid">
+                <div class="about-content">
+                    <h2 class="section-title"><i class="fas fa-info-circle icon-title"></i> Our Mission</h2>
+                    <p>HealthFlow was created to empower you with accessible, easy-to-understand health information. We aim to be a simple, non-diagnostic tool to help guide your first steps when you feel unwell.</p>
+                    <p>We believe that clarity is key to better health decisions. Our checker quickly filters symptoms to provide relevant information, encouraging you to connect with a professional for diagnosis and treatment.</p>
+                </div>
+                <div class="about-image-wrapper">
+                    <i class="fas fa-notes-medical" style="font-size: 150px; color: var(--color-turquoise);"></i>
+                    <p class="caption" style="margin-top: 20px;">Committed to informational support.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 HealthFlow. All rights reserved. | <a href="#" class="footer-link">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
